@@ -1,138 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Desire Roslin Dziele | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desire Roslin Dziele | Portfolio</title>
 
-<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<header>
-    <div class="container nav">
+<header class="navbar">
 
-        <h2 class="logo">Desire Roslin Dziele</h2>
+    <nav class="nav-content">
 
-        <nav>
+        <a href="#hero" class="logo">
+            Desire Roslin Dziele
+        </a>
+
+        <button
+            id="menuButton"
+            class="menu-toggle"
+            aria-expanded="false"
+            aria-label="Open navigation menu">
+
+            ☰
+
+        </button>
+
+        <div class="nav-links" id="mobileMenu">
+
             <a href="#about">About</a>
-            <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#learning">Learning</a>
             <a href="#contact">Contact</a>
-        </nav>
 
-    </div>
+        </div>
+
+    </nav>
+
 </header>
 
-<section class="hero">
+<main>
+
+<section class="hero" id="hero">
 
     <div class="container">
 
-        <h1>Computer Science Student</h1>
+        <h1>Desire Roslin Dziele</h1>
 
-        <h2>C++ • Algorithms • Full‑Stack Development</h2>
-
-        <p>
-            Passionate about software engineering,
-            systems programming,
-            modern C++,
-            and full-stack development.
+        <p class="subtitle">
+            Computer Science Student • C++ • Algorithms • Full‑Stack Development
         </p>
 
-        <div class="buttons">
+        <p>
+            Computer Science student at the University of Łódź interested in
+            software engineering, modern C++, systems programming,
+            algorithms, and full‑stack development.
+        </p>
+
+        <div class="badges">
+
+            <span class="badge">C++</span>
+            <span class="badge">Algorithms</span>
+            <span class="badge">Angular</span>
+            <span class="badge">TypeScript</span>
+            <span class="badge">Express.js</span>
+            <span class="badge">SQLite</span>
+
+        </div>
+
+        <div class="hero-actions">
+
             <a href="assets/cv/Desire_Roslin_Dziele_CV.pdf"
-               class="btn">
-               Download CV
+               class="btn-primary">
+                Download CV
             </a>
 
             <a href="https://github.com/roslindesiredziele-hash"
                target="_blank"
-               class="btn secondary">
-               GitHub
+               class="btn-secondary">
+                GitHub
             </a>
+
         </div>
 
     </div>
 
 </section>
 
-<section id="about" class="container">
+<section class="container" id="about">
 
     <h2>About Me</h2>
 
     <p>
-        I enjoy understanding how software works internally
-        and building maintainable, well-tested software from
-        first principles.
+        My work ranges from implementing custom C++ data structures and
+        benchmarking algorithms to building modern web applications
+        with Angular, Express.js, TypeScript, and SQLite.
+    </p>
+
+    <p>
+        I enjoy understanding how software works internally and building
+        maintainable, well-tested solutions from first principles.
     </p>
 
 </section>
 
-<section id="projects" class="container">
+<section class="container" id="skills">
+
+    <h2>Technical Skills</h2>
+
+    <div class="skills-grid">
+
+        <article class="skill-card">
+
+            <h3>Programming Languages</h3>
+
+            <ul>
+                <li>C++</li>
+                <li>TypeScript</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>SQL</li>
+            </ul>
+
+        </article>
+
+        <article class="skill-card">
+
+            <h3>Web Development</h3>
+
+            <ul>
+                <li>Angular</li>
+                <li>Express.js</li>
+                <li>REST APIs</li>
+                <li>SQLite</li>
+            </ul>
+
+        </article>
+
+        <article class="skill-card">
+
+            <h3>Testing</h3>
+
+            <ul>
+                <li>Catch2</li>
+                <li>Vitest</li>
+                <li>Supertest</li>
+                <li>CTest</li>
+            </ul>
+
+        </article>
+
+        <article class="skill-card">
+
+            <h3>Tools</h3>
+
+            <ul>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>CMake</li>
+                <li>GitHub Actions</li>
+                <li>VS Code</li>
+                <li>CLion</li>
+            </ul>
+
+        </article>
+
+    </div>
+
+</section>
+
+<section class="container" id="projects">
 
     <h2>Featured Projects</h2>
 
-    <div class="grid">
+    <div class="projects-grid">
 
-        <article class="card">
+        <article class="project-card">
+
             <h3>Person Management System</h3>
+
+            <span class="project-status active">
+                Active Development
+            </span>
+
             <p>
-                Angular + Express + SQLite CRUD system with testing.
+                Angular + Express.js + SQLite CRUD application
+                with API testing and database persistence.
             </p>
+
         </article>
 
-        <article class="card">
+        <article class="project-card">
+
             <h3>Algorithms Sorting Benchmark</h3>
+
+            <span class="project-status active">
+                Active Development
+            </span>
+
             <p>
-                Benchmarking six sorting algorithms with
-                performance analysis and graph generation.
+                Benchmarking suite implementing Bubble,
+                Insertion, Merge, Quick, Heap and Shell Sort.
             </p>
+
         </article>
 
-        <article class="card">
+        <article class="project-card">
+
             <h3>Vec</h3>
+
+            <span class="project-status ready">
+                Portfolio Ready
+            </span>
+
             <p>
-                Custom dynamic array implementation featuring
-                move semantics, Catch2 testing, CMake,
-                CTest and GitHub Actions.
+                Modern C++ dynamic array implementation featuring
+                move semantics, iterator support,
+                CMake, CTest, GitHub Actions, and Catch2.
             </p>
+
+            <ul>
+                <li>34 Test Cases</li>
+                <li>84 Assertions</li>
+                <li>100% CI Passing</li>
+            </ul>
+
         </article>
 
-        <article class="card">
+        <article class="project-card">
+
             <h3>Language Evolution Simulator</h3>
+
+            <span class="project-status ready">
+                Portfolio Ready
+            </span>
+
             <p>
                 OOP project demonstrating abstraction,
-                inheritance, polymorphism and testing.
+                inheritance, polymorphism,
+                Catch2 testing and CI/CD.
             </p>
+
+            <ul>
+                <li>10 Test Cases</li>
+                <li>61 Assertions</li>
+                <li>100% CI Passing</li>
+            </ul>
+
+        </article>
+
+        <article class="project-card">
+
+            <h3>CVRPTW</h3>
+
+            <span class="project-status bachelor">
+                Bachelor's Project Candidate
+            </span>
+
+            <p>
+                Optimization project focused on the
+                Capacitated Vehicle Routing Problem
+                with Time Windows.
+            </p>
+
+        </article>
+
+        <article class="project-card">
+
+            <h3>IPv4Address</h3>
+
+            <span class="project-status planned">
+                Planned Improvements
+            </span>
+
+            <p>
+                IPv4 parsing and validation utility written in C++.
+            </p>
+
+        </article>
+
+        <article class="project-card">
+
+            <h3>CitiesDistance</h3>
+
+            <span class="project-status planned">
+                Planned Improvements
+            </span>
+
+            <p>
+                Geographic distance calculator using reusable
+                object-oriented abstractions.
+            </p>
+
         </article>
 
     </div>
 
 </section>
 
-<section id="skills" class="container">
+<section class="container" id="learning">
 
-    <h2>Skills</h2>
+    <h2>Currently Learning</h2>
 
-    <div class="skills">
-
-        <span>C++</span>
-        <span>TypeScript</span>
-        <span>Python</span>
-        <span>Angular</span>
-        <span>Express.js</span>
-        <span>SQLite</span>
-        <span>Catch2</span>
-        <span>CMake</span>
-        <span>CTest</span>
-        <span>GitHub Actions</span>
-
-    </div>
+    <ul>
+        <li>Advanced C++</li>
+        <li>Generic Programming</li>
+        <li>Software Architecture</li>
+        <li>Optimization Algorithms</li>
+        <li>Angular Ecosystem</li>
+        <li>Backend Development with Express.js</li>
+    </ul>
 
 </section>
 
-<section id="contact" class="container">
+<section class="container" id="contact">
 
     <h2>Contact</h2>
 
@@ -152,15 +336,14 @@
 
 </section>
 
+</main>
+
 <footer>
 
-    <p>
-        © 2026 Desire Roslin Dziele
-    </p>
+    © 2026 Desire Roslin Dziele · University of Łódź
 
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
